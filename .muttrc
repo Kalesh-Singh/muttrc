@@ -11,11 +11,27 @@ set smtp_url = "smtps://singh.kalesh97@gmail.com@smtp.gmail.com:465/"
 set imap_user = "singh.kalesh97@gmail.com"
 # set imap_pass = ""
 set folder = "imaps://imap.gmail.com:993"
-set spoolfile = "+INBOX"
 set ssl_force_tls = yes
+
+set spoolfile = "+INBOX"
+set record = "+[Gmail]/Sent Mail"
+set trash = "imaps://imap.gmail.com/[Gmail]/Trash"
+set postponed = "+[Gmail]/Drafts"
 
 # G to get mail
 bind index G imap-fetch-mail
 set editor = "vim"
 set charset = "utf-8"
 set record = ''
+
+# Gmail-style keyboard shortcuts
+# We need the "noop" bind so that the line editor accepts IMAP
+# folders with spaces in their names.
+bind editor <space> noop
+macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
+macro index,pager d "<enter-command>set trash=\"imaps://imap.googlemail.com/[GMail]/Bin\"\n <delete-message>" "Gmail delete message"
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index,pager gs "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to starred messages"
+macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+
