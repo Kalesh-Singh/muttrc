@@ -1,0 +1,21 @@
+# Note: You will need to enable Less secure app access in your gmail settings
+# If you have two factor authentication enabled you will need to generate and
+# use an app password instead"
+set realname = "Kalesh Singh"
+set from = "kaleshsingh96@gmail.com"
+set use_from = yes
+set envelope_from = yes
+
+set smtp_url = "smtps://gmail.com@smtp.gmail.com:465/"
+# set smtp_pass = "<gmail password>"
+set imap_user = "<username@gmail.com>"
+# set imap_pass = "<gmail password>"
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set ssl_force_tls = yes
+
+# G to get mail
+bind index G imap-fetch-mail
+set editor = "vim"
+set charset = "utf-8"
+set record = ''
