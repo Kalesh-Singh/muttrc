@@ -13,7 +13,7 @@ for modified_file in "${files_modified_array[@]}"; do
 done
 
 if [ "$files_with_password" -ne 0 ]; then
-    echo -e "\e[1m\e[32mPlease set all password to enpty string (\"\") and try committing again.\e[0m\n"
+    echo -e "\e[1m\e[32mPlease set all passwords to empty string (\"\") and try committing again.\e[0m\n"
   exit "$files_with_password" # commit will not execute
   exit 1 # commit will not execute
 else

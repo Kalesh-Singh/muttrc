@@ -7,9 +7,9 @@ set use_from = yes
 set envelope_from = yes
 
 set smtp_url = "smtps://gmail.com@smtp.gmail.com:465/"
-# set smtp_pass = "<fake gmail password>"
+# set smtp_pass = ""
 set imap_user = "<username@gmail.com>"
-# set imap_pass = "<fake gmail password>"
+# set imap_pass = ""
 set folder = "imaps://imap.gmail.com:993"
 set spoolfile = "+INBOX"
 set ssl_force_tls = yes
