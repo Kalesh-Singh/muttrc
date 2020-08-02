@@ -1,8 +1,8 @@
 # Note: You will need to enable Less secure app access in your gmail settings
 # If you have two factor authentication enabled you will need to generate and
 # use an app password instead"
-set realname = "<Firstname Lastname>"
-set from = "<username@gmail.com>"
+set realname = "Kalesh Singh"
+set from = "singh.kalesh97@gmail.com"
 set use_from = yes
 set envelope_from = yes
 
