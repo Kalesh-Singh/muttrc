@@ -7,3 +7,6 @@ if [ -f  $MUTT_CONF ]; then
 fi
 ln -s $(pwd).muttrc $MUTT_CONF
 
+# Enable the githooks to check for passwords and emails
+# before commiting them into the git history - Offf! :(
+git config core.hooksPath .githooks
