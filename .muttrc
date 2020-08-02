@@ -6,7 +6,7 @@ set from = "singh.kalesh97@gmail.com"
 set use_from = yes
 set envelope_from = yes
 
-set smtp_url = "smtps://gmail.com@smtp.gmail.com:465/"
+set smtp_url = "smtps://singh.kalesh97@gmail.com@smtp.gmail.com:465/"
 # set smtp_pass = ""
 set imap_user = "singh.kalesh97@gmail.com"
 # set imap_pass = ""
