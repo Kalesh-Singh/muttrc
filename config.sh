@@ -7,7 +7,7 @@ if [ -L  "$MUTT_CONF" ] || [ -f "$MUTT_CONF" ]; then
     echo "Found file exists"
     rm $MUTT_CONF
 fi
-ln -s $(pwd).muttrc $MUTT_CONF
+ln -s $(pwd)/.muttrc $MUTT_CONF
 
 # Enable the githooks to check for passwords and emails
 # before commiting them into the git history - Ooff! :(
