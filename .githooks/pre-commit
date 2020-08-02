@@ -1,0 +1,22 @@
+#!/bin/bash
+
+files_modified="$(git diff-index --cached --name-only HEAD)"
+readarray -t files_modified_array <<<"$files_modified"
+password_check_matcher="set\s(imap|smtp)_pass\s?=\s?['\\\"].+['\\\"]"
+files_with_password=0
+
+for modified_file in "${files_modified_array[@]}"; do
+  if [ "" != "$(grep -E "$password_check_matcher" "$modified_file")" ]; then
+    printf "\n\e[1m\e[31mPassword found in %s \n\e[0m\n" "$modified_file"
+    files_with_password=$((files_with_password+1))
+  fi
+done
+
+if [ "$files_with_password" -ne 0 ]; then
+    echo -e "\e[1m\e[32mPlease set all password to enpty string (\"\") and try committing again.\e[0m\n"
+  exit "$files_with_password" # commit will not execute
+  exit 1 # commit will not execute
+else
+  exit 0 # commit will execute
+fi
+
