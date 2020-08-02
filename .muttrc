@@ -39,3 +39,13 @@ macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
 # l -> filter -> <Return>
 # Return to unfiltered mailbox
 # l -> all -> <Return>
+
+# Relpy to all recipients
+bind index,pager R group-reply
+
+# View/Edit Raw Message with Message ID
+# Open a message for reading then <e>
+
+# Remove host machine name from message ID
+# Doesn't seem to work :(
+set hidden_host = yes
